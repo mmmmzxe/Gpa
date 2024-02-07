@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-body font-secondary text-lg text-grey font-medium;
+  }
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    @apply  text-dark;
+  }
+  a:hover{
+    color:rgb(139, 139, 139);
+   
+  }
+ 
+  p{
+    color:rgb(212, 209, 209);
+  }
+  .h1 {
+    @apply text-6xl lg:text-5xl font-bold text-orange-600;
+  }
+  .h2 {
+    @apply font-black text-[46px] mb-4 leading-[1.1];
+  }
+  .h3 {
+    @apply   text-[40px];
+  }
+  .h4 {
+    @apply   text-[26px] text-white;
+  }
+  .h5 {
+    @apply font-medium text-[22px] text-white;
+  }
+  .pretitle {
+    @apply font-secondary font-bold text-base uppercase tracking-[-0.04em] text-orange-600 mb-2;
+  }
+  .btn {
+    @apply h-14 rounded-full bg-orange-600 px-[42px] text-white text-base tracking-[0.02em] outline-none hover:bg-orange-700 transition-all duration-300 flex justify-center items-center;
+  }
+  .input {
+    @apply h-[56px] w-[316px] outline-none rounded-full border-2 border-gray-200 font-semibold text-base text-dark  placeholder:text-dark;
+  }
+}
+body{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #00000055;
+	z-index: 10;
+	overflow: hidden;
+}
+
+
+.total{
+	border-top-left-radius: 100px;
+	border-bottom-right-radius: 100px;
+}
+
+
+main{
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+.empty-text {
+	display: block;
+	padding: 2rem;
+	margin: auto;
+}
+
+
+.single h2 {
+	text-transform: capitalize;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	position: relative;
+}
+
+.single h2::after {
+	position: absolute;
+	content: '';
+	width: 50px;
+	bottom: -6px;
+	height: 2px;
+	
+	left: 0;
+}
+.btn-sm{
+  color: rgb(234 88 12 / var(--tw-bg-opacity));
+	--tw-bg-opacity: 1;
+	padding: 10px;
+	transition: .3s ease-out;
+  
+}
+.btn-sm:hover{
+	padding: 10px;
+	background-color: rgb(234 88 12 / var(--tw-bg-opacity));
+	--tw-bg-opacity: 1;
+  color: white;
+  border-radius: 25px;
+  transition: .3s ease-in-out ;
+
+}
+.single .btn-primary {
+	font-weight: 600;
+}
+.row .btn{
+	color: rgb(234 88 12 / var(--tw-bg-opacity));
+	--tw-bg-opacity: 1;
+  
+	color: white;
+}
+.row .btn:hover{
+	background: none;
+	color: rgb(234 88 12 / var(--tw-bg-opacity));
+	--tw-bg-opacity: 1;
+  
+}
+.price {
+	font-size: 20px;
+	color: rgb(234 88 12 / var(--tw-bg-opacity));
+	--tw-bg-opacity: 1;
+  
+}
+
+.rowi:hover{
+	filter: brightness(150%);
+	
+	transition: .6s ease-in-out ;
+}
+
+.product-info {
+	flex-basis: 50%;
+	
+}
+
+.product-info h3 {
+	font-weight: 400;
+	font-size: 1rem;
+}
+

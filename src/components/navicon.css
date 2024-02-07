@@ -1,0 +1,141 @@
+:root {
+    --facebook: #3a5796;
+    --Whatsapp: #0caf40;
+    --linkedin: #0371ae;
+    --instagram: #d12c7a;
+}
+
+.icon {
+    display: flex;
+margin: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 50vh;
+    position: fixed;
+}
+
+.icon nav {
+  
+    padding: 10px;
+    width: 100%;
+    display: flex;
+ 
+    flex-direction: column;
+}
+
+.icon li {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    position: relative;
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: 0.3s all ease-in-out;
+}
+
+.icon li svg {
+    width: 25px;
+    height: 25px;
+    --tw-bg-opacity: 1;
+    color: rgb(234 88 12 / var(--tw-bg-opacity));
+}
+
+.icon li svg path,
+.icon li svg circle {
+    transition: 0.3s all ease-in-out;
+}
+
+.icon li span {
+    position: absolute;
+    color: #fff;
+    transform: translateY(0px);
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-delay: 0s;
+}
+
+.icon li span::before {
+    position: absolute;
+    content: '';
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #fff;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.icon li.facebook span {
+    background-color: var(--facebook);
+}
+
+.icon li.facebook span::before {
+    border-top-color: var(--facebook);
+}
+
+.icon li.Whatsapp span {
+    background-color: var(--Whatsapp);
+}
+
+.icon li.Whatsapp span::before {
+    border-top-color: var(--Whatsapp);
+}
+
+.icon li.linkedin span {
+    background-color: var(--linkedin);
+}
+
+.icon li.linkedin span::before {
+    border-top-color: var(--linkedin);
+}
+
+.icon li.instagram span {
+    background-color: var(--instagram);
+}
+
+.icon li.instagram span::before {
+    border-top-color: var(--instagram);
+}
+
+
+
+.icon li.facebook:hover {
+    background-color: var(--facebook);
+}
+
+.icon li.Whatsapp:hover {
+    background-color: var(--Whatsapp);
+}
+
+.icon li.linkedin:hover {
+    background-color: var(--linkedin);
+}
+
+.icon li.instagram.active,
+.icon li.instagram:hover {
+    background-color: var(--instagram);
+}
+
+.icon li.active span,
+.icon li:hover span {
+    transform: translateY(-80px);
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.2s;
+}
+
+.icon li.active svg path,
+.icon li.active svg circle,
+.icon li:hover svg path,
+.icon li:hover svg circle {
+    fill: #fff;
+}
